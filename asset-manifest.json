@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/SemSceneTrans/static/css/main.ab0456bf.css",
+    "main.js": "/SemSceneTrans/static/js/main.f18de4e7.js",
+    "static/media/bg.png": "/SemSceneTrans/static/media/bg.2d8e7c41720e04db1a37.png",
+    "index.html": "/SemSceneTrans/index.html",
+    "main.ab0456bf.css.map": "/SemSceneTrans/static/css/main.ab0456bf.css.map",
+    "main.f18de4e7.js.map": "/SemSceneTrans/static/js/main.f18de4e7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab0456bf.css",
+    "static/js/main.f18de4e7.js"
+  ]
+}
