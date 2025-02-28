@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/SemSceneTrans/static/css/main.ab0456bf.css",
-    "main.js": "/SemSceneTrans/static/js/main.f18de4e7.js",
-    "static/media/bg.png": "/SemSceneTrans/static/media/bg.2d8e7c41720e04db1a37.png",
+    "main.css": "/SemSceneTrans/static/css/main.9587a354.css",
+    "main.js": "/SemSceneTrans/static/js/main.426bcce0.js",
     "index.html": "/SemSceneTrans/index.html",
-    "main.ab0456bf.css.map": "/SemSceneTrans/static/css/main.ab0456bf.css.map",
-    "main.f18de4e7.js.map": "/SemSceneTrans/static/js/main.f18de4e7.js.map"
+    "main.9587a354.css.map": "/SemSceneTrans/static/css/main.9587a354.css.map",
+    "main.426bcce0.js.map": "/SemSceneTrans/static/js/main.426bcce0.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab0456bf.css",
-    "static/js/main.f18de4e7.js"
+    "static/css/main.9587a354.css",
+    "static/js/main.426bcce0.js"
   ]
 }
