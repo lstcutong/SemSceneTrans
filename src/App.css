@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.App {
+    position: relative;
+    height: '400px';
+    min-height: 100vh;
+    background-image: url('../public/bg.png'); /* 设置背景图片 */
+    background-size: cover; /* 使图片拉伸充满横向 */
+    background-position: center;
+    filter: blur(5px); /* 对背景图片进行虚化处理，数值可根据需要调整 */
+}
+
+.title-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* 设置标题文字颜色 */
+    z-index: 1; /* 确保标题显示在背景图片上方 */
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.gif-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
