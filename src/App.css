@@ -4,15 +4,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.App {
-    position: relative;
-    height: '400px';
-    min-height: 100vh;
-    background-image: url('../public/bg.png'); /* 设置背景图片 */
-    background-size: cover; /* 使图片拉伸充满横向 */
-    background-position: center;
-    filter: blur(5px); /* 对背景图片进行虚化处理，数值可根据需要调整 */
-}
+
 
 .title-container {
     position: absolute;
