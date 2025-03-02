@@ -56,9 +56,9 @@ export const PLYViewer = ({url}) => {
 };
 
 
-export const PLYViewerv2 = ({url}) => {
+export const PLYViewerv2 = ({url, pointsize}) => {
     const meshRef = useRef();
-    let geom = useLoader(PLYLoader, process.env.PUBLIC_URL + '/example.ply');
+    let geom = useLoader(PLYLoader, url);
 
     geom = to_origin(geom)
     console.log(geom)
@@ -69,7 +69,7 @@ export const PLYViewerv2 = ({url}) => {
 
         <points>
             <primitive object={geom} attach="geometry"/>
-            <pointsMaterial vertexColors={true} size={0.05}/>
+            <pointsMaterial vertexColors={true} size={pointsize}/>
         </points>
  
       </>

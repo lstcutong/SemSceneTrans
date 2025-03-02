@@ -1,12 +1,13 @@
 import React, {Suspense} from 'react';
 import './App.css';
-import {PLYViewer, PLYViewerv2} from './viewer'
-import {OrbitControls} from "@react-three/drei";
-//import {Html, useProgress} from '@react-three/drei'
-import {Canvas,useLoader, useThree} from '@react-three/fiber'
+import Interactive from './interactive';
+
+
+
 
 
 function App() {
+  document.title = "VDRNet"
   return (
     <div>
       <div style={{position: 'relative'}}>
@@ -32,7 +33,7 @@ function App() {
           zIndex: 1,
           color: 'rgb(247, 241, 242)'}}
         
-        >Display to Any Device: A Semantic-Preserved Scene Transformation Network for Point Cloud of Large-Scale Scene
+        >VRDNet: A Semantic-Preserved Transformation Network for Point Cloud of Large-Scale Scene
         </h1>
       </div>
 
@@ -49,40 +50,87 @@ function App() {
             }}></img>
           </div>
           <div style={{width: "50%", fontSize: "13pt", textAlign: 'left', marginLeft: "16px"}}>
-              We propose a novel method that transforms a large-scale scene point cloud into point sets at different resolutions. Across these resolutions, semantic consistency is preserved. This is achieved by representing the scene using a semantic map, where a set of support points along with their semantic features and semantic logits is distributed in whole space. When a target resolution is given, query points are sampled in space and their semantics are queried from the semantic map. Experiments on 2 indoor scene datasets demonstrate the consistency of our method in multi-resolution semantics and the accuracy of the semantics at high resolutions. Our method also shows some adaptability in outdoor scenes, where the objects in these scenes are not well-defined. Furthermore, we provide new perspective for semantic parsing and model simplification of large-scale scenes, especially outdoor scenes, i.e. semantic maps rather than specific objects in the scene.
+              We propose <b>VRDNet</b>, <b>V</b>ariable-<b>R</b>esolution <b>D</b>isplay <b>Net</b>work that transforms a large-scale scene point cloud into point sets at different resolutions. Across these resolutions, semantic consistency is preserved. This is achieved by representing the scene using a semantic map, where a set of support points along with their semantic features and semantic logits is distributed in whole space. When a target resolution is given, query points are sampled in space and their semantics are queried from the semantic map. Experiments on 2 indoor scene datasets demonstrate the consistency of our method in multi-resolution semantics and the accuracy of the semantics at high resolutions. Our method also shows some adaptability in outdoor scenes, where the objects in these scenes are not well-defined. Furthermore, we provide new perspective for semantic parsing and point cloud simplification of large-scale scenes, especially outdoor scenes, i.e. semantic maps rather than specific objects in the scene.
           </div>
         </div>
 
         <div style={{fontSize: "30pt", fontWeight: 'bold', textAlign: 'left', color: "rgb(141, 53, 37)", marginTop: "20px"}}>
-          Results
+          Variabel-Resolution Ability
         </div>
 
-        <img src={process.env.PUBLIC_URL + '/test.gif'}
-            style={{
-              width: '30%',  // 宽度设置为父元素宽度的 50%
-              height: 'auto' // 高度根据宽度等比例缩放
-          }}
-        />
+        <div style={{fontSize: "25pt", textAlign: 'left', color: "rgb(141, 53, 37)", marginTop: "10px"}}>
+            Indoor Scene
+        </div>
+
+        
+        <div style={{display: "flex"}}>
+          <div style={{
+                width: '50%',  // 宽度设置为父元素宽度的 50%
+                height: 'auto' // 高度根据宽度等比例缩放
+              }}>
+            <div style={{fontSize: "20pt", textAlign: 'center', color: "rgb(49, 15, 9)", marginTop: "20px"}}>NYUCAD</div>
+            <img src={process.env.PUBLIC_URL + '/gifs/nyucad.gif'} style={{
+                width: '95%',  // 宽度设置为父元素宽度的 50%
+                height: 'auto' // 高度根据宽度等比例缩放
+              }}/>
+          </div>
+          <div style={{
+                width: '50%',  // 宽度设置为父元素宽度的 50%
+                height: 'auto' // 高度根据宽度等比例缩放
+              }}>
+            <div style={{fontSize: "20pt", textAlign: 'center', color: "rgb(49, 15, 9)", marginTop: "20px"}}>S3DIS</div>
+            <img src={process.env.PUBLIC_URL + '/gifs/s3dis.gif'} style={{
+                width: '95%',  // 宽度设置为父元素宽度的 50%
+                height: 'auto' // 高度根据宽度等比例缩放
+              }}/>
+          </div>
+          
+        </div>
+
+        <div style={{fontSize: "25pt", textAlign: 'left', color: "rgb(141, 53, 37)", marginTop: "20px"}}>
+            Outdoor Scene
+        </div>
+
+        
+        <div style={{display: "flex"}}>
+          <div style={{
+                width: '50%',  // 宽度设置为父元素宽度的 50%
+                height: 'auto' // 高度根据宽度等比例缩放
+              }}>
+            <div style={{fontSize: "20pt", textAlign: 'center', color: "rgb(49, 15, 9)", marginTop: "20px"}}>Semantic3D</div>
+            <img src={process.env.PUBLIC_URL + '/gifs/semantic3d.gif'} style={{
+                width: '95%',  // 宽度设置为父元素宽度的 50%
+                height: 'auto' // 高度根据宽度等比例缩放
+              }}/>
+          </div>
+          <div style={{
+                width: '50%',  // 宽度设置为父元素宽度的 50%
+                height: 'auto', // 高度根据宽度等比例缩放
+                
+              }}>
+            <div style={{fontSize: "20pt", textAlign: 'center', color: "rgb(49, 15, 9)", marginTop: "20px"}}>Chinese Rockery Garden</div>
+            <img src={process.env.PUBLIC_URL + '/gifs/rockery.gif'} style={{
+                width: '95%',  // 宽度设置为父元素宽度的 50%
+                height: 'auto' // 高度根据宽度等比例缩放
+              }}/>
+          </div>
+          
+        </div>
+        
 
         <div style={{fontSize: "30pt", fontWeight: 'bold', textAlign: 'left', color: "rgb(141, 53, 37)", marginTop: "20px"}}>
           Interactive visualizations
         </div>
         
-        <div style={{width: "450px", height: "450px", background: "rgb(226, 226, 226)"}}>
-          <Canvas>
-            <PLYViewerv2 url={process.env.PUBLIC_URL + '/example.ply'}></PLYViewerv2>
-            <OrbitControls enableRotate={true} enableDamping={true} up={[0,0,1]}></OrbitControls>
-          </Canvas> 
-        </div>
+        <Interactive dataset="nyucad" title="NYUCAD"></Interactive>
+        <Interactive dataset="s3dis" title="S3DIS"></Interactive>
+        <Interactive dataset="semantic3d" title="Semantic3D"></Interactive>
+        <Interactive dataset="rockery" title="Chinese Rockery Garden"></Interactive>
          
         
 
 
         
-      </div>
-      <div className="button-container">
-          <button>了解更多</button>
-          <button>查看详情</button>
       </div>
     </div>
     
