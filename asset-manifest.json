@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/SemSceneTrans/static/css/main.9587a354.css",
-    "main.js": "/SemSceneTrans/static/js/main.426bcce0.js",
+    "main.css": "/SemSceneTrans/static/css/main.681f79cd.css",
+    "main.js": "/SemSceneTrans/static/js/main.fbf75c81.js",
     "index.html": "/SemSceneTrans/index.html",
-    "main.9587a354.css.map": "/SemSceneTrans/static/css/main.9587a354.css.map",
-    "main.426bcce0.js.map": "/SemSceneTrans/static/js/main.426bcce0.js.map"
+    "main.681f79cd.css.map": "/SemSceneTrans/static/css/main.681f79cd.css.map",
+    "main.fbf75c81.js.map": "/SemSceneTrans/static/js/main.fbf75c81.js.map"
   },
   "entrypoints": [
-    "static/css/main.9587a354.css",
-    "static/js/main.426bcce0.js"
+    "static/css/main.681f79cd.css",
+    "static/js/main.fbf75c81.js"
   ]
 }
